@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeLab.MainPage">
+
+    <Grid Margin="0,40,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Welcome to Barcode Lab" 
+               HorizontalOptions="Start"
+               Margin="10"/>
+        
+        <Editor x:Name="BarcodeText" Grid.Row="1"
+                BackgroundColor="LightGray"
+                HorizontalOptions="FillAndExpand"
+                Margin="10"
+                Text="Testo di Prova"/>
+        
+        <Button Grid.Row="2"
+            Text="Crea barcode"
+                Margin="10"
+                HorizontalOptions="Center"
+                Clicked="CreaBarcodeButton_Clicked" />
+        
+        <Image x:Name="BarcodeImage" Grid.Row="3"
+               Margin="10"
+               HeightRequest="200"
+               WidthRequest="200" />
+
+    </Grid>
+
+</ContentPage>
